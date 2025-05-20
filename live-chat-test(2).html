@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Live Chat</title>
+</head>
+<body>
+    <h1>Benvenuto nel Test della Live Chat</h1>
+    <p>Questa è una pagina di test per integrare la Live Chat.</p>
+
+    <!-- Configurazione della chat -->
+    <script>
+        window.sprinklrLiveChatSettings = {
+            appId: "68221d4dbfcb4620cce430ab_app_300246376",
+            locale: "it",
+            autoTrigger: 5 // tempo in secondi prima dell'apertura automatica
+        };
+    </script>
+
+    <!-- Script di caricamento della chat -->
+    <script src="https://prod3-live-chat.sprinklr.com/page?appId=68221d4dbfcb4620cce430ab_app_300246376&device=MOBILE&skin=MODERN&enableClose=true&zoom=false&webview=true"></script>
+
+    <!-- Messaggio di debug -->
+    <script>
+        window.addEventListener('error', function(event) {
+            console.error('Errore nel caricamento della live chat:', event.message);
+        });
+    </script>
+</body>
+</html>
