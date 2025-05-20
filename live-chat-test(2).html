@@ -1,32 +1,7 @@
-
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Live Chat</title>
-</head>
-<body>
-    <h1>Benvenuto nel Test della Live Chat</h1>
-    <p>Questa è una pagina di test per integrare la Live Chat.</p>
-
-    <!-- Configurazione della chat -->
-    <script>
-        window.sprinklrLiveChatSettings = {
-            appId: "68221d4dbfcb4620cce430ab_app_300246376",
-            locale: "it",
-            autoTrigger: 5 // tempo in secondi prima dell'apertura automatica
-        };
-    </script>
-
-    <!-- Script di caricamento della chat -->
-    <script src="https://space-prod3.sprinklr.com/page?appId=68221d4dbfcb4620cce430ab_app_300246376&device=MOBILE&skin=MODERN&enableClose=true&zoom=false&webview=true"></script>
-
-    <!-- Messaggio di debug -->
-    <script>
-        window.addEventListener('error', function(event) {
-            console.error('Errore nel caricamento della live chat:', event.message);
-        });
-    </script>
-</body>
-</html>
+<script>
+window.sprChatSettings = {"appId":"68221d4dbfcb4620cce430ab_app_300246376","skin":"MODERN"};
+!function(){var t=window,a=t.sprChat;if(!a||!a.loaded){var e=document,n=function(){n.q.push(arguments)};
+n.q=[],t.sprChat=n,t.sprChat.loaded=!0;var r=function(){var a=e.createElement("script");
+a.type="text/javascript",a.async=!0,a.src="https://prod3-live-chat.sprinklr.com/api/livechat/handshake/widget/"+t.sprChatSettings.appId,a.onerror=function(){t.sprChat.loaded=!1};
+var n=e.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)};"loading"!==e.readyState?r():e.addEventListener("DOMContentLoaded",r)}}();
+</script>
